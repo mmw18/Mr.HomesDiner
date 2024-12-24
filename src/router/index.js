@@ -1,16 +1,23 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import Menu from '@/components/Menu.vue';
-import Cart from '@/components/Cart.vue';
-import AdminPanel from '@/components/AdminPanel.vue';
+import { createRouter, createWebHistory } from "vue-router";
+import MenuPage from "@/components/MenuPage.vue"; // Adjust the path if needed
+import HomePage from "@/components/HomePage.vue"; // Your homepage component
 
 const routes = [
-  { path: '/menu', name: 'Menu', component: Menu },
-  { path: '/cart', name: 'Cart', component: Cart },
-  { path: '/admin', name: 'AdminPanel', component: AdminPanel },
+  {
+    path: "/",
+    name: "Home",
+    component: HomePage, // Your homepage component
+  },
+  {
+    path: "/start-order",
+    name: "MenuPage",
+    component: MenuPage,
+  },
+  // Add other routes as needed
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes,
 });
 

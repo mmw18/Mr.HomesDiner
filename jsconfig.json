@@ -1,19 +1,19 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
-    "baseUrl": "./",
-    "moduleResolution": "node",
+    "target": "esnext", // Modern JavaScript target
+    "module": "esnext", // ESNext module system
+    "baseUrl": "./", // Base directory for module resolution
+    "moduleResolution": "node", // Resolve modules like Node.js
     "paths": {
       "@/*": [
-        "src/*"
+        "src/*" // Alias "@" to the "src" folder
       ]
     },
     "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
+      "esnext", // Include modern ECMAScript features
+      "dom", // Browser DOM APIs
+      "dom.iterable", // DOM iteration APIs
+      "scripthost" // Scripting host APIs
     ]
   }
 }
